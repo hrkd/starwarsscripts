@@ -9,7 +9,7 @@ export default function Home() {
       {Object.keys(TITLE).map((episode) => (
         <div key={episode}>
           <Link href={`/${episode}`} key={episode}>
-            {TITLE[episode as keyof Title]}
+            Episode {TITLE[episode as keyof Title].number} - {TITLE[episode as keyof Title].title}
           </Link>
         </div>
       ))}
