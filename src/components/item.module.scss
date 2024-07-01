@@ -1,0 +1,27 @@
+.wrapper {
+    margin-bottom: 1rem;
+
+    >a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: start;
+
+        &:hover {
+            text-decoration: none;
+
+            >span:last-child {
+                text-decoration: underline;
+            }
+        }
+
+        >span:first-child {
+            opacity: 0.6;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+        }
+
+        >span:last-child {
+            font-size: 1.1rem;
+        }
+    }
+}

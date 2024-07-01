@@ -6,6 +6,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
+      <h1>StarWarsScripts.com</h1>
       {Object.keys(TITLE).map((episode) => (
         <div key={episode}>
           <Link href={`/${episode}`} key={episode}>
