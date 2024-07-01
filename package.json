@@ -7,19 +7,28 @@
     "dev": "next dev",
     "build": "next build",
     "next:start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "unzip": "chmod 755 ./scripts/unzip_scripts_files.sh && ./scripts/unzip_scripts_files.sh",
+    "ep1": "csvtojson --delimiter=';' data-scripts-star-wars-master/5.\\ Data\\ CSV/star_wars_1_data.csv > data/ep1.json",
+    "ep2": "csvtojson --delimiter=';' data-scripts-star-wars-master/5.\\ Data\\ CSV/star_wars_2_data.csv > data/ep2.json",
+    "ep3": "csvtojson --delimiter=';' data-scripts-star-wars-master/5.\\ Data\\ CSV/star_wars_3_data.csv > data/ep3.json",
+    "ep4": "csvtojson --delimiter=';' data-scripts-star-wars-master/5.\\ Data\\ CSV/star_wars_4_data.csv > data/ep4.json",
+    "ep5": "csvtojson --delimiter=';' data-scripts-star-wars-master/5.\\ Data\\ CSV/star_wars_5_data.csv > data/ep5.json",
+    "ep6": "csvtojson --delimiter=';' data-scripts-star-wars-master/5.\\ Data\\ CSV/star_wars_6_data.csv > data/ep6.json",
+    "csvtojson": "npm run ep1 && npm run ep2 && npm run ep3 && npm run ep4 && npm run ep5 && npm run ep6"
   },
   "dependencies": {
+    "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "csvtojson": "^2.0.10",
     "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "eslint-config-next": "14.2.4",
+    "typescript": "^5"
   }
 }
