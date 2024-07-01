@@ -5,7 +5,7 @@
   "scripts": {
     "start": "next dev",
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate && next build",
     "next:start": "next start",
     "lint": "next lint",
     "unzip": "chmod 755 ./scripts/unzip_scripts_files.sh && ./scripts/unzip_scripts_files.sh",
@@ -15,7 +15,8 @@
     "ep4": "csvtojson --delimiter=';' data-scripts-star-wars-master/5.\\ Data\\ CSV/star_wars_4_data.csv > data/ep4.json",
     "ep5": "csvtojson --delimiter=';' data-scripts-star-wars-master/5.\\ Data\\ CSV/star_wars_5_data.csv > data/ep5.json",
     "ep6": "csvtojson --delimiter=';' data-scripts-star-wars-master/5.\\ Data\\ CSV/star_wars_6_data.csv > data/ep6.json",
-    "csvtojson": "npm run ep1 && npm run ep2 && npm run ep3 && npm run ep4 && npm run ep5 && npm run ep6"
+    "csvtojson": "npm run ep1 && npm run ep2 && npm run ep3 && npm run ep4 && npm run ep5 && npm run ep6",
+    "generate": "npm run unzip && npm run csvtojson"
   },
   "dependencies": {
     "next": "14.2.4",
