@@ -1,13 +1,11 @@
-import { promises as fs } from "node:fs";
 import Link from "next/link";
 import {TITLE} from '@/constant/'
 import type {Title} from '@/constant/'
+import { readFile } from "@/utils/readFile";
 
 export default async function Home({params}:{params:{episode:string}}) {
     const {episode} = params;
-    const path = __dirname.replace(`.next/server/app/[episode]`, "data/") + `${episode}.json`; //.next/server is the path to the build folder that is created when you run next command
-    const fileBuffer = await fs.readFile(path);
-    const json = JSON.parse(fileBuffer.toString());
+    const json = await readFile(episode as keyof Title)
 
     return (
         <div>
