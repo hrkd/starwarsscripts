@@ -5,9 +5,9 @@ export type Title = {
     ep4: string;
     ep5: string;
     ep6: string;
-    ep7: string;
-    ep8: string;
-    ep9: string;
+    // ep7: string;
+    // ep8: string;
+    // ep9: string;
 }
 
 export const TITLE = {
@@ -17,7 +17,7 @@ export const TITLE = {
     ep4: "Star Wars: Episode IV - A New Hope",
     ep5: "Star Wars: Episode V - The Empire Strikes Back",
     ep6: "Star Wars: Episode VI - Return of the Jedi",
-    ep7: "Star Wars: Episode VII - The Force Awakens",
-    ep8: "Star Wars: Episode VIII - The Last Jedi",
-    ep9: "Star Wars: Episode IX - The Rise of Skywalker",
+    // ep7: "Star Wars: Episode VII - The Force Awakens",
+    // ep8: "Star Wars: Episode VIII - The Last Jedi",
+    // ep9: "Star Wars: Episode IX - The Rise of Skywalker",
 }
