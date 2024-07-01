@@ -1,5 +1,8 @@
 import type {Title} from '@/constant/'
 import { readFile } from "@/utils/readFile";
+import styles from "./page.module.scss";
+import Link from 'next/link';
+import {TITLE} from '@/constant/'
 
 export default async function Home({params}:{params:{episode:string, id:string}}) {
     const {episode, id} = params;
@@ -7,8 +10,14 @@ export default async function Home({params}:{params:{episode:string, id:string}}
     const item = json.find((item:any) => item.id === id);
 
     return (
-            <div key={item.id}>
-                <p>{item.text} / {item.from}</p>
+            <div className={styles.wrapper}>
+                <article className={styles.item}>
+                    <p>{item.text}</p>
+                    <span>{item.from}</span>
+                    <Link href={`/${episode}#${id}`}>
+                        {`<- Episode ${TITLE[episode as keyof Title].number} - ${TITLE[episode as keyof Title].title}`}
+                    </Link>
+                </article>
             </div>
     );
 }

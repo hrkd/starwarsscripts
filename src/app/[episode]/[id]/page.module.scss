@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 2rem - 2rem);
+    height: 100%;
+
+    .item {
+        width: 80%;
+
+        p {
+            font-size: 3rem;
+        }
+
+        span {
+            display: block;
+            text-align: right;
+            opacity: 0.6;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 2rem;
+        }
+    }
+}
