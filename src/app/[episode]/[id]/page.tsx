@@ -19,13 +19,14 @@ export default async function Home({params}:{params:{episode:string, id:string}}
                         {`<- Episode ${TITLE[episode as keyof Title].number} - ${TITLE[episode as keyof Title].title}`}
                     </Link>
 
-                    <div className={styles.comment}>
-                        <Disqus {...{
-                            url:`https://starwarsscripts.com/${episode}/${id}`,
-                            identifier:id,
-                            title:id}}/>
-                    </div>
                 </article>
+
+                <div className={styles.comment}>
+                    <Disqus {...{
+                        url:`https://starwarsscripts.com/${episode}/${id}`,
+                        identifier:id,
+                        title:id}}/>
+                </div>
             </div>
     );
 }
