@@ -22,8 +22,19 @@
             display: inline-block;
             margin-top: 2rem;
         }
-.comment {
-    margin-top: 5rem;
+                                                                                                                                .comment {
+                                                                                                                                    margin-top: 5rem;
+                                                                                                                                }
+    }
 }
+@media (max-width: 767px) {
+    .wrapper {
+        .item {
+            width: 100%;
+
+            p {
+                font-size: 2rem;
+            }
+        }
     }
 }

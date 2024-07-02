@@ -25,3 +25,11 @@
         }
     }
 }
+@media (max-width: 767px) {
+    .wrapper {
+        >a {
+            flex-direction: column-reverse;
+            align-items: start;
+        }
+    }
+}
